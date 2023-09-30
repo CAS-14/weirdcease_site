@@ -1,0 +1,25 @@
+{% extends "main/page.html" %}
+
+{% block title %}discord ID lookup{% endblock %}
+
+{% block meta %}
+    {{ embed("Discord ID Lookup", "You can use this tool to look up information about Discord IDs.") }}
+{% endblock %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='main/js/discord_id.js') }}"></script>
+{% endblock %}
+
+{% block navbar %}
+    {{ navback("projects") }}
+{% endblock %}
+
+{% block content %}
+    <h2>discord id lookup</h2>
+    <p>This tool can be used to look up Discord IDs, inspired by <a href="http://discord.id" target="_blank">discord.id</a>. This works with any ID, including user ID, server ID, message ID, or channel ID. It will show date/time of creation, user names and profile pics, and any other information that can be found. This is WIP and not done yet!</p>
+    <div id="id_lookup">
+        <button type="button" onclick="lookup();">Lookup</button>
+        <input type="text" id="discord_id" class="" placeholder="discord id">
+        <p id="output_txt"> </p>
+    </div>
+{% endblock %}

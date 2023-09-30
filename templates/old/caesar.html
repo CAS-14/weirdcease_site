@@ -1,0 +1,28 @@
+{% extends "main/page.html" %}
+
+{% block title %}caesar cipher{% endblock %}
+
+{% block meta %}
+    {{ embed("Caesar Cipher Decryption Tool", "You can use this tool to decipher caesar ciphers.") }}
+{% endblock %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='main/js/caesar.js') }}"></script>
+{% endblock %}
+
+{% block navbar %}
+    {{ navback("projects") }}
+{% endblock %}
+
+{% block content %}
+<h2>caesar decipherer</h2>
+<p>Use this to decipher caesar ciphers. Simply type or paste in the ciphered text into the box, and click the button. All possible outcomes will be printed, along with the one that seems most likely to be correct. THIS IS WIP!!!</p>
+<p>THIS CURRENTLY DOES NOT WORK</p>
+<div id="caesar_machine">
+    <textarea id="inputtext" class="wide-input" style="overflow:scroll" placeholder="caesar cipher text"></textarea>
+    <button type="button" onclick="decipher();">Decipher</button>
+    <button type="button" onclick="clearbox();">Clear</button>
+    <input type="checkbox" id="toggle_clear" checked> clear textbox on decipher<br>
+    <p id="output_txt"> </p>
+</div>
+{% endblock %}

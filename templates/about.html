@@ -1,0 +1,32 @@
+{% extends "main/page.html" %}
+
+{% macro button(image, url) %}
+    <a href="{{ url }}" target="_blank">
+        <img width="88" height="31" class="web-button" src="{{ url_for('static', filename='main/images/buttons/'+image+'.gif') }}" alt="{{ image }}">
+    </a>
+{% endmacro %}
+
+{% block title %}about{% endblock %}
+
+{% block meta %}
+    {{ embed("About Me", "Learn about me and my interests.") }}
+{% endblock %}
+
+{% block navbar %}
+    {{ nav("about") }}
+{% endblock %}
+
+{% block content %}
+    <h2>about me</h2>
+    <p>Hello! My name is Charles, but I go by weirdcease (formerly cas) online. I am yet another techy nerd on the internet. Check out my interests below.</p>
+    <h2>favorite things</h2>
+    <ul>
+        <li>hobbies: gaming, art, coding, music, being outdoors</li>
+        <li>games: Minecraft, CS:GO, Touhou, GTAV, Persona 4</li>
+        <li>music: Sweet Trip, goreshit, xul, Bladee, Elliott Smith</li>
+        <li>foods: sushi, burgers, pasta, burritos, gummies</li>
+    </ul>
+    {# <h2>88x31 buttons</h2>
+    <p>These are a throwback to the early web. I have gathered them from various sources, some old, some new. If you made one of these and want credit or want it removed, please contact me.</p>
+    {{ button() }} #}
+{% endblock %}

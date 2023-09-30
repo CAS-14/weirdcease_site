@@ -1,0 +1,47 @@
+{% extends "main/page.html" %}
+
+{% macro ghl(project, tagline) %}
+    <a href="https://github.com/weirdcease/{{ project }}" target="_blank">{{ tagline }}</a>
+    <br>
+{% endmacro %}
+
+{% block title %}projects{% endblock %}
+
+{% block meta %}
+    {{ embed("Projects", "A center for my art and coding projects") }}
+{% endblock%}
+
+{% block navbar %}
+    {{ nav("projects") }}
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>art stuff</h2>
+        <ul>
+            <li><a href="{{ url_for('main.gallery') }}">Art Gallery</a></li>
+            <li>Music links coming soon...</li>
+        </ul>
+        <h2>online projects</h2>
+        <ul>
+            <li><a href="{{ url_for('main.webhook_sender') }}">Simple Discord webhook sender</a></li>
+            <li><a href="{{ url_for('clicker.home') }}" target="_blank">You click, they click, the number goes up</a></li>
+            <li><a href="{{ url_for('channel.home') }}" target="_blank">My (very WIP) imageboard</a></li>
+            <li><a href="{{ url_for('signout.home') }}" target="_blank">Student signout manager</a></li>
+            <li><a href="https://mysoge.act25.com" target="_blank">MY SOGE :&#40;</a></li>
+        </ul>
+        <h2>github projects</h2>
+        <ul>
+            <li>{{ ghl("pictureman", "Rapid keyboard-controlled photo organizer") }}</li>
+            <li>{{ ghl("ramenbright", "Change your X11 brightness and look at Ramen") }}</li>
+            <li>{{ ghl("wdeduper", "Quickly deduplicate files by checksum and size") }}</li>
+            <li>{{ ghl("miniprojects", "Random, old, and broken Python experiments") }}</li>
+            <li>{{ ghl("sillyquip", "Meme ransomware with Doge mascot") }}</li>
+            <li>{{ ghl("engine", "Game engine that uses PyGame [indev]") }}</li>
+            <li>{{ ghl("ceasenotes", "Very WIP CLI notes app [indev]") }}</li>
+        </ul>
+        <h2>other stuff</h2>
+        <a href="https://github.com/weirdcease/" target="_blank">My modest GitHub account</a><br>
+        <a href="https://realm.act25.com/" target="_blank">My Creative/Survival Minecraft server</a><br>
+    </div>
+{% endblock %}
