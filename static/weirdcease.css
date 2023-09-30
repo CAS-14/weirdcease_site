@@ -1,0 +1,327 @@
+/* variables */
+
+:root {
+    --fallback: #67c72b;
+    --accent: #77ff00;
+    --gray: #333;
+    --white: #fff;
+    --black: #000;
+    --transparent: rgba(0, 0, 0, 0.7);
+    --overlay: linear-gradient(rgba(0, 30, 0, 0.4), rgba(0, 30, 0, 0.4));
+    --background: url("/image/acidgreen.png");
+    --fish: url("/image/fish.png");
+}
+
+
+/* declarations */
+
+@font-face {
+    font-family: Alagard;
+    src: url("/font/alagard.ttf");
+}
+
+@keyframes pulse-accent {
+    0%, 100% {
+        background-color: var(--gray);
+        color: var(--accent);
+    }
+    50% {
+        background-color: var(--accent);
+        color: var(--black);
+    }
+}
+
+@keyframes pulse-opacity {
+    0%, 100% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 50%;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* elements */
+
+::selection {
+    background-color: var(--accent);
+    color: var(--black);
+}
+
+/* * {
+    cursor: var(--fish) 0 0, default;
+} */
+
+html {
+    height: 100%;
+    font-family: Alagard;
+}
+
+body {
+    background: var(--overlay), var(--background), var(--fallback);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    overflow-y: hidden;
+    margin: 0;
+}
+
+span, p, a, b, i, h1, h2, h3, ul, li, ol, input, textarea, button, label, select, option {
+    font-family: Alagard;
+    color: var(--accent);
+}
+
+a:not(.nolink):hover {
+    background-color: var(--accent);
+    color: var(--black);
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-style: italic;
+}
+
+ul {
+	list-style: circle;
+}
+
+hr {
+    background-color: var(--accent);
+    border: none;
+    height: 1px;
+}
+
+input, button, textarea, select {
+    background-color: var(--gray);
+}
+
+input {
+    margin-top: 5px;
+}
+
+
+/* main classes */
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.fillheight {
+    height: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.headbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.topnav a {
+    background-color: var(--gray);
+    flex-basis: 0px;
+    flex-grow: 1;
+    color: var(--accent);
+    text-align: center;
+    padding: 8px 0;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: solid var(--accent) 2px;
+}
+
+.topnav a.active {
+    background-color: var(--transparent);
+    border: solid var(--accent) 2px;
+    border-bottom: none;
+}
+
+.topnav a:hover:not(.active) {
+    animation: pulse-accent 1s infinite ease-in-out;
+}
+
+.box {
+    width: 600px;
+    padding: 0 20px;
+    background-color: var(--transparent);
+    background-size: 100%;
+    border: solid var(--accent) 2px;
+    border-top: none;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: 10px;
+    scrollbar-track-color: var(--transparent);
+    scrollbar-color: var(--accent);
+}
+
+.box-small {
+    width: 400px;
+    padding: 15px;
+    background-color: var(--transparent);
+    background-size: 100%;
+    border: solid var(--accent);
+    border-width: 2px;
+    text-align: center;
+}
+
+.box-small h1 {
+    margin-top: 0px;
+}
+
+.ascii-art {
+    text-decoration: none;
+    white-space: pre;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.ascii-art:hover {
+    animation: pulse-opacity 1s infinite ease-in-out;
+}
+
+.logo {
+    animation: spin 2s infinite linear;
+}
+
+.bottom-text {
+    font-size: 12px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    align-self: center;
+}
+
+.highlight {
+    background-color: var(--accent);
+    color: var(--black);
+}
+
+.wide-input {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.socials td:not(.padright) {
+    padding-right: 3px;
+    text-align: center;
+}
+
+.padright {
+    padding-right: 10px !important;
+}
+
+
+/* gallery classes */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.gallery-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    scroll-margin-bottom: 15px;
+}
+
+.image-container {
+    flex: 1;
+    width: auto;
+    height: auto;
+    background-color: var(--accent);
+    border: solid 2px var(--accent);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.expand {
+    aspect-ratio: auto;
+}
+
+.display-image {
+    border: solid 2px var(--accent);
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: scale-down;
+}
+
+
+/* blog classes */
+
+.blog-entry, .blog-entry * {
+    display: flex;
+    flex-direction: row;
+}
+
+.entry-title {
+    flex: 1;
+}
+
+.comments-count {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blog-post {
+    margin: 20px 0;
+}
+
+.post-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-title h1 {
+    margin: 0px;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comment-author {
+    font-style: italic;
+    padding-right: 10px;
+}
+
+.web-button {
+    width: 88px;
+    height: 31px;
+}

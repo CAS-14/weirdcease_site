@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/weirdcease
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://weirdcease.com
+  * I am weirdcease (https://keybase.io/weirdcease) on keybase.
+  * I have a public key with fingerprint 9370 C4AD 1E81 62DC 3CC4  D6CB 1B42 B62A 500E 8E82
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01013db22b4069d7ba17f623eb273baa4eb43b437b2e28388067e30d81be5f14c4ca0a",
+      "fingerprint": "9370c4ad1e8162dc3cc4d6cb1b42b62a500e8e82",
+      "host": "keybase.io",
+      "key_id": "1b42b62a500e8e82",
+      "kid": "01013db22b4069d7ba17f623eb273baa4eb43b437b2e28388067e30d81be5f14c4ca0a",
+      "uid": "15286ee168afa2584aaed932d50e8e19",
+      "username": "weirdcease"
+    },
+    "service": {
+      "hostname": "weirdcease.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1674760585,
+  "expire_in": 157680000,
+  "prev": "59bac62b45cb23f0911d0e4324d155536e90324ffca29d944dc7b8888b1381d2",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIeAnicrVJbbA1RFL2lD0obiYqEIh0fPlw658yZmTOXxgciBEkRiXpc53VvJ9o7
+18zcUpeKVxoSJeKRRkREo5F6RUKFVBGpj0q8kqLeNHyQkCaaqlBnWr74tHOSk73P
+WmuvvXNu5w0N5WZULZ51Iz0/sjyj/ebRVIg9fLA7rVCHVyuRtLJODFyiggvPj66z
+uRJRVKACjVMIKVINi5uUADNmQE1QaGqUECQo0uQxKRQQaxirhik0lWNAhR4DiCFG
+VKKElZidiAs36doJX8pamqkyRDgQGBiQM40xxA1GAUWQGpDoqiqwwFASyx0vYEhz
+lHhiuu3ImkyiA/b+gf/PvlODfXSIDSGAgUmMQB0jQgS3NMj1oC+wAqAn3ASpFBK9
+QdguZ0LaVbaEFVmvspkIVhvM8hdmOnMqJT/pOr7DnAr5Vu77SS8ScP3q5CCYRn/L
+RKmd4HKXklElXM92EkoESCTz7UAXGCYyDVXHelgRG5O2K6J2gNBNA6sygj6iSkrq
+FiXMkOvRGYVaTLUA4KpAGkQc6LquGcJSZRKLMQItbiHEmUmxDAo0DHiwaU+sTzhK
+BEmbJC4lPTueIH7KlVPfurEqM5SRG8rOGhL8sVDu8FF/ft5+b1hoJ94cX6F4Xx6d
+/P7wEo5O0Fq7nfx35QuObd+XmjmxM6djTufd/JqpDT86uzvGjHw+ouC0WnRhE145
+tKOzTp/Xv+1+35UH25onX8Qzy8+XxHNO6DMuvk12hR+3jX7R0v7SuVO6rK3t6sRT
+Zasr3jX2tvS8yu7q70H35i3ETTtKe4vr8+vc2tba600T+sqOZWYt/cqHn9v6cc/l
+vIOFeUeKxr1OrambcqdUKT5be+b8nobC5vT7gvlPDs+ds9eqL4CTftwK+4eOt5Z1
+eXtL7pLZlTXVq8C1T+vf9pZ+KK6bnEhipC3q61hS//nNz2f30u1rxzb2l2WHLkz7
+Zm9oP/A0Z/wXtWjXLwAeRIg=
+=2L3I
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/weirdcease
+
+==================================================================
