@@ -8,8 +8,8 @@
     --black: #000;
     --transparent: rgba(0, 0, 0, 0.7);
     --overlay: linear-gradient(rgba(0, 30, 0, 0.4), rgba(0, 30, 0, 0.4));
-    --background: url("/image/acidgreen.png");
-    --fish: url("/image/fish.png");
+    --background: url("/main/acidgreen.png");
+    --fish: url("/main/fish.png");
 }
 
 
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: Alagard;
-    src: url("/font/alagard.ttf");
+    src: url("/main/alagard.ttf");
 }
 
 @keyframes pulse-accent {
