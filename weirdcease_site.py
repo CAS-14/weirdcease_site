@@ -35,7 +35,7 @@ def home():
         if a in agent.lower():
             mobile = True
 
-    return bp.render("home.html", mobile=mobile)
+    return bp.render("wchome.html", mobile=mobile)
 
 @bp.route("/about")
 def about():
@@ -139,17 +139,17 @@ def gallery_image(image_id):
     ).fetchone()
     
     if not image:
-        return bp.render("error.html", code="404")
+        return bp.render("wcerror.html", code="404")
 
     return bp.render("galleryimg.html", image=image)
 
 @bp.route("/projects/webhook")
 def webhook_sender():
-    return bp.render("webhook.html")
+    return bp.render("webhook_sender.html")
 
 @bp.route("/force404")
 def force404():
-    return bp.render("error.html", code="404", message="Balls")
+    return bp.render("wcerror.html", code="404", message="Balls")
 
 @bp.route("/keybase.txt")
 def keybase():
@@ -158,7 +158,7 @@ def keybase():
 @bp.route("/shhh")
 @bp.route("/login")
 def login():
-    return bp.render("login.html")
+    return bp.render("secretlogin.html")
 
 @bp.route("/login_handler", methods=["POST"])
 def login_handler():
