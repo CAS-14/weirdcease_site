@@ -2,7 +2,7 @@
 
 {% macro button(image, url) %}
     <a href="{{ url }}" target="_blank">
-        <img width="88" height="31" class="web-button" src="{{ url_for('static', filename='buttons/'+image+'.gif') }}" alt="{{ image }}">
+        <img width="88" height="31" class="web-button" src="{{ url_for('main.static', filename='buttons/'+image+'.gif') }}" alt="{{ image }}">
     </a>
 {% endmacro %}
 
