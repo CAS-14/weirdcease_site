@@ -20,7 +20,7 @@
             {% for image in images %}
                 <div class="image-container">
                     <a class="nolink" href="{{ url_for('main.gallery_image', image_id=image[0]) }}">
-                        <img class="gallery-image" src="{{ url_for('main.static', filename='image/art/'+image[2] ) }}" title="{{ image[1] }}">
+                        <img class="gallery-image" src="{{ static('image/art/'+image[2]) }}" title="{{ image[1] }}">
                     </a>
                 </div>
                 {% set row_count.value = row_count.value + 1 %}

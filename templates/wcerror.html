@@ -8,7 +8,7 @@
 
 {% if code == "404" %}
     {% block head %}
-        <script src="{{ url_for('main.static', filename='404_doge.js') }}"></script>
+        <script src="{{ static('404_doge.js') }}"></script>
     {% endblock %}
 {% endif %}
 
