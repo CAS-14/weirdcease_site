@@ -13,7 +13,7 @@
 {% block content %}
     <div class="center">
         <h3>{{ image[0] }}</h3>
-        {% set url = url_for("static", filename="image/art/"+image[1]) %}
+        {% set url = url_for("main.static", filename="image/art/"+image[1]) %}
         <a class="nolink" href="{{ url }}" target="_blank">
             <img src="{{ url }}" alt="{{ image[0] }} by weirdcease" class="display-image">
         </a>
