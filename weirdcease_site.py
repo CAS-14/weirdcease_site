@@ -1,4 +1,4 @@
-from flask import request, redirect, url_for, send_file, g, flash, session
+from flask import request, redirect, url_for, send_file, g, flash, session, render_template
 from werkzeug.security import check_password_hash
 import json
 from datetime import datetime
@@ -35,11 +35,11 @@ def home():
         if a in agent.lower():
             mobile = True
 
-    return bp.render("wchome.html", mobile=mobile)
+    return render_template("wchome.html", mobile=mobile)
 
 @bp.route("/about")
 def about():
-    return bp.render("about.html")
+    return render_template("about.html")
 
 @bp.route("/blog")
 def blog():
@@ -47,7 +47,7 @@ def blog():
         "SELECT id, title, time, comments FROM blogposts ORDER BY id DESC;"
     ).fetchall()
 
-    return bp.render("blog.html", posts=posts)
+    return render_template("blog.html", posts=posts)
 
 @bp.route("/blog/post/<post_id>")
 def blogpost(post_id):
@@ -62,10 +62,10 @@ def blogpost(post_id):
             (post_id,)
         ).fetchall()
 
-        return bp.render("blogpost.html", post=post, comments=comments)
+        return render_template("blogpost.html", post=post, comments=comments)
 
     else:
-        return bp.render("blognf.html", post_id=post_id)
+        return render_template("blognf.html", post_id=post_id)
 
 @bp.route("/blog/post/<parent_post>/create_comment", methods=["POST"])
 def create_comment(parent_post):
@@ -120,7 +120,7 @@ def create_post():
 
 @bp.route("/projects")
 def projects():
-    return bp.render("projects.html")
+    return render_template("projects.html")
 
 @bp.route("/projects/gallery")
 def gallery():
@@ -129,7 +129,7 @@ def gallery():
     ).fetchall()
     random.shuffle(images)
 
-    return bp.render("gallery.html", images=images)
+    return render_template("gallery.html", images=images)
 
 @bp.route("/projects/gallery/<image_id>")
 def gallery_image(image_id):
@@ -139,17 +139,17 @@ def gallery_image(image_id):
     ).fetchone()
     
     if not image:
-        return bp.render("wcerror.html", code="404")
+        return render_template("wcerror.html", code="404")
 
-    return bp.render("galleryimg.html", image=image)
+    return render_template("galleryimg.html", image=image)
 
 @bp.route("/projects/webhook")
 def webhook_sender():
-    return bp.render("webhook_sender.html")
+    return render_template("webhook_sender.html")
 
 @bp.route("/force404")
 def force404():
-    return bp.render("wcerror.html", code="404", message="Balls")
+    return render_template("wcerror.html", code="404", message="Balls")
 
 @bp.route("/keybase.txt")
 def keybase():
@@ -158,7 +158,7 @@ def keybase():
 @bp.route("/shhh")
 @bp.route("/login")
 def login():
-    return bp.render("secretlogin.html")
+    return render_template("secretlogin.html")
 
 @bp.route("/login_handler", methods=["POST"])
 def login_handler():
@@ -183,7 +183,7 @@ def logout():
 @bp.route("/secret")
 def secret():
     if "user_id" in session and session["user_id"] == "cas":
-        return bp.render("secret.html")
+        return render_template("secret.html")
     
     flash("You must login to view that page.")
     return redirect(url_for("main.login"))
