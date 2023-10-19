@@ -20,8 +20,9 @@ DB_ROUTES = [
     "main.gallery_image"
 ]
 
-bp = tools.MyBlueprint("main", "weirdcease_site", host="weirdcease.com", db="main", db_routes=DB_ROUTES)
+bp = tools.MyBlueprint("main", "weirdcease_site", host="indev.act25.com", db="main", db_routes=DB_ROUTES)
 
+# these dont hide anything important right now so even though i accidentally made them public it doesn't really matter
 ADMIN_USER = "cas"
 ADMIN_HASH = "pbkdf2:sha256:260000$Je4bs5nrC66GvmoX$fbb5ddea1d6e336c6f4dcb2e68acab19fe4564175df63a18710d77e359f1789a"
 
